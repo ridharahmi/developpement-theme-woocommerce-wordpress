@@ -397,4 +397,15 @@ Upload the Akismet plugin to your blog, Activate it, then enter your [Akismet.co
 * Fix a global warning introduced in 2.2.5
 * Add changelog and additional readme.txt tags
 * Fix an array conversion warning in some versions of PHP
-* Support a new WPCOM_API_KEY
+* Support a new WPCOM_API_KEY constant for easier use with WordPress MU
+
+= 2.2.5 =
+*Release Date - 13th July, 2009*
+
+* Include a new Server Connectivity diagnostic check, to detect problems caused by firewalls
+
+= 2.2.4 =
+*Release Date - 3rd June, 2009*
+
+* Fixed a key problem affecting the stats feature in WordPress MU
+* Provide additional blog information in Akismet API calls

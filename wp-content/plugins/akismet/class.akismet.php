@@ -1332,4 +1332,60 @@ p {
 
 			if ( isset( $comment['akismet_result'] ) && 'true' == $comment['akismet_result'] ) {
 				// Lame: tightly coupled with the IXR classes. Unfortunately the action provides no context and no way to return anything.
-				$wp_xmlrpc_se
+				$wp_xmlrpc_server->error( new IXR_Error( 0, 'Invalid discovery target' ) );
+			}
+		}
+	}
+	
+	public static function pingback_forwarded_for( $r, $url ) {
+		static $urls = array();
+	
+		// Call this with $r == null to prime the callback to add headers on a specific URL
+		if ( is_null( $r ) && !in_array( $url, $urls ) ) {
+			$urls[] = $url;
+		}
+
+		// Add X-Pingback-Forwarded-For header, but only for requests to a specific URL (the apparent pingback source)
+		if ( is_array( $r ) && is_array( $r['headers'] ) && !isset( $r['headers']['X-Pingback-Forwarded-For'] ) && in_array( $url, $urls ) ) {
+			$remote_ip = preg_replace( '/[^a-fx0-9:.,]/i', '', $_SERVER['REMOTE_ADDR'] );
+		
+			// Note: this assumes REMOTE_ADDR is correct, and it may not be if a reverse proxy or CDN is in use
+			$r['headers']['X-Pingback-Forwarded-For'] = $remote_ip;
+
+			// Also identify the request as a pingback verification in the UA string so it appears in logs
+			$r['user-agent'] .= '; verifying pingback from ' . $remote_ip;
+		}
+
+		return $r;
+	}
+	
+	/**
+	 * Ensure that we are loading expected scalar values from akismet_as_submitted commentmeta.
+	 *
+	 * @param mixed $meta_value
+	 * @return mixed
+	 */
+	private static function sanitize_comment_as_submitted( $meta_value ) {
+		if ( empty( $meta_value ) ) {
+			return $meta_value;
+		}
+
+		$meta_value = (array) $meta_value;
+
+		foreach ( $meta_value as $key => $value ) {
+			if ( ! isset( self::$comment_as_submitted_allowed_keys[$key] ) || ! is_scalar( $value ) ) {
+				unset( $meta_value[$key] );
+			}
+		}
+
+		return $meta_value;
+	}
+	
+	public static function predefined_api_key() {
+		if ( defined( 'WPCOM_API_KEY' ) ) {
+			return true;
+		}
+		
+		return apply_filters( 'akismet_predefined_api_key', false );
+	}
+}
