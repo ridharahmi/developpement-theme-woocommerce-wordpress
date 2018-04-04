@@ -45,8 +45,6 @@
 					</div><!-- Social /- -->
 				</div><!-- Container /- -->
 			</div><!-- Top Header /- -->
-			
-			<!-- Menu Block -->
 			<div class="container-fluid no-padding menu-block">
 				<!-- Container -->
 				<div class="container">
@@ -73,14 +71,14 @@
 										<li class="mini_cart_item">
 											<a title="Remove this item" class="remove" href="#">&#215;</a>
 											<a href="#" class="shop-thumbnail">
-												<img alt="poster_2_up" class="attachment-shop_thumbnail" src="images/product-wishlist-1.jpg">Flying Ninja
+												<img alt="poster_2_up" class="attachment-shop_thumbnail" src="<?php echo theme_url; ?>/images/product-wishlist-1.jpg">Flying Ninja
 											</a>
 											<span class="quantity">2 &#215; <span class="amount">Rs.12.00</span></span>
 										</li>
 										<li class="mini_cart_item">
 											<a title="Remove this item" class="remove" href="#">&#215;</a>
 											<a href="#" class="shop-thumbnail">
-												<img alt="poster_2_up" class="attachment-shop_thumbnail" src="images/product-wishlist-2.jpg">Flying Ninja
+												<img alt="poster_2_up" class="attachment-shop_thumbnail" src="<?php echo theme_url; ?>/images/product-wishlist-2.jpg">Flying Ninja
 											</a>
 											<span class="quantity">2 &#215; <span class="amount">Rs.12.00</span></span>
 										</li>
