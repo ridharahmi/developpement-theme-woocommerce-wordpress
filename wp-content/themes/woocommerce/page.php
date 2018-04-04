@@ -1,23 +1,23 @@
-<?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package VW Ecommerce Shop
- */
-
-get_header(); ?>
-
+<?php get_header(); ?>
+<div class="page-banner container-fluid no-padding">
+                <!-- Container -->
+                <div class="container">
+                    <div class="banner-content">
+                        <h3>Shop</h3>
+                        <p>our vision is to be Earth's most customer centric company</p>
+                    </div>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html" title="Home">Home</a></li>                         
+                        <li class="active">Shop</li>
+                    </ol>
+                </div><!-- Container /- -->
+</div>
 <div id="content-vw" class="container">
     <div class="middle-align">
-        <div class="col-md-4 col-sm-4 col-xs-12 widget-area no-right-padding">
+        <div class="col-md-3 col-sm-3 col-xs-12 widget-area no-right-padding">
                         <?php get_sidebar( 'shop' ); ?>
         </div>
-		<div class="col-md-8">
+		<div class="col-md-9 col-sm-9 col-xs-12">
 			<?php 
             while ( have_posts() ) : the_post(); ?>
             	<img src="<?php the_post_thumbnail_url('full'); ?>" width="100%">
