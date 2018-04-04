@@ -43,3 +43,8 @@ function styles_script()
    wp_enqueue_script('functions-js', theme_url . '/js/functions.js', array('jquery'), false, true);
 }
 
+/*
+  remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+  remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+  remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+*/

@@ -1,4 +1,4 @@
-<footer id="footer-main" class="footer-main container-fluid" style="margin-top: 500px;">
+<footer id="footer-main" class="footer-main container-fluid" style="/*margin-top: 500px;*/">
 			<!-- Container -->
 			<div class="container">
 				<div class="row">
