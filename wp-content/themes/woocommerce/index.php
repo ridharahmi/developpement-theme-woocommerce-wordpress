@@ -177,11 +177,8 @@
 					</div><!-- END REVOLUTION SLIDER -->
 				</div><!-- END OF SLIDER WRAPPER -->
 				<div class="goto-next"><a href="#category-section"><i class="icon icon-Mouse bounce"></i></a></div>
-			</div><!-- Slider Section 1 /- -->
-			
-			<!-- Services Section -->
+			</div>
 			<div class="services-section container-fluid">
-				<!-- Container -->
 				<div class="container">
 					<div class="col-md-4 col-sm-6 col-xs-6">
 						<div class="srv-box">
@@ -199,10 +196,8 @@
 							<i class="icon icon-Headset"></i><h5>24/7 support</h5><i class="icon icon-Timer"></i>
 						</div>
 					</div>
-				</div><!-- Container /- -->
-			</div><!-- Services Section /- -->
-			
-			<!-- Category Section -->
+				</div>
+			</div>
 			<div id="category-section" class="category-section container-fluid no-padding">
 				<div class="category-carousel">
 					<div class="col-md-12 col-sm-12 col-xs-12 no-padding">
