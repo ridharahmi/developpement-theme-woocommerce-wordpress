@@ -36,7 +36,7 @@
 								<h3 class="widget-title">recent posts</h3>
 								<div class="latest-box">
 									<div class="post-box">
-										<a href="#"><img src="images/latest-post-1.jpg" alt="Post"></a>
+										<a href="#"><img src="<?php echo theme_url; ?>/images/latest-post-1.jpg" alt="Post"></a>
 										<h5><a href="#" title="need max shop.">I Phone 6s sales on</a></h5>
 										<div class="star-rating">
 											<i class="fa fa-star"></i>
@@ -50,7 +50,7 @@
 								</div>
 								<div class="latest-box">
 									<div class="post-box">
-										<a href="#"><img src="images/latest-post-2.jpg" alt="Post"></a>
+										<a href="#"><img src="<?php echo theme_url; ?>/images/latest-post-2.jpg" alt="Post"></a>
 										<h5><a href="#" title="need max shop.">mens casual footwear</a></h5>
 										<div class="star-rating">
 											<i class="fa fa-star"></i>
@@ -64,7 +64,7 @@
 								</div>
 								<div class="latest-box">
 									<div class="post-box">
-										<a href="#"><img src="images/latest-post-3.jpg" alt="Post"></a>
+										<a href="#"><img src="<?php echo theme_url; ?>/images/latest-post-3.jpg" alt="Post"></a>
 										<h5><a href="#" title="need max shop.">running shoes</a></h5>
 										<div class="star-rating">
 											<i class="fa fa-star"></i>
