@@ -1,9 +1,10 @@
 <?php
  /*
-  variables utilise in theme woocommerce
-  */
+  Variables utilise in theme woocommerce
+ */
   define('theme_path', get_template_directory());
   define('theme_url', get_template_directory_uri());
+
 
 add_action('wp_print_styles', 'fonts_googleapis');
 function fonts_googleapis() {
@@ -29,7 +30,7 @@ function styles_css()
 add_action('wp_enqueue_scripts', 'styles_script');
 function styles_script()
 {
-   wp_enqueue_script('jquery-js', theme_url . '/js/jquery.min.js', array('jquery'), false, true);
+   //wp_enqueue_script('jquery-js', theme_url . '/js/jquery.min.js', array('jquery'), false, true);
    wp_enqueue_script('lib-js', theme_url . '/libraries/lib.js', array('jquery'), false, true);
    wp_enqueue_script('jquery-count-js', theme_url . '/js/jquery.countdown.min.js', array('jquery'), false, true);
    wp_enqueue_script('jquery-tool-js', theme_url . '/js/jquery.themepunch.tools.min.js', array('jquery'), false, true);
