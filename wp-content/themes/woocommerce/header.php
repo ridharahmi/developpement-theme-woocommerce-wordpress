@@ -7,7 +7,16 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class; ?> data-offset="200" data-spy="scroll" data-target=".ow-navigation">
+	<div class="main-container">
+		<div id="site-loader" class="load-complete">
+			<div class="loader">
+				<div class="loader-inner ball-clip-rotate">
+					<div></div>
+				</div>
+			</div>
+		</div>
+		
 	<header class="header-section container-fluid no-padding">
 			<!-- Top Header -->
 			<div class="top-header container-fluid no-padding">
@@ -139,3 +148,4 @@
 				</div><!-- Container /- -->
 			</div><!-- Menu Block /- -->
 		</header><!-- Header /- -->
+	</div>
